@@ -131,10 +131,6 @@ out <- access(
 - **Boundary effects:** extend demand polygons or isochrone coverage if suppliers just outside admin borders should compete (as in multi-county NYC-adjacent workflows).
 - **Chunking:** very large `duration_url()` tables can hit OSRM coordinate limits; split `data` into chunks and `bind_rows()`.
 
-## Extensions not in this package
-
-Uncertainty propagation (e.g. ACS margins of error), mode-choice weighting, and custom `lwc_*` simulation helpers from individual projects are intentionally out of scope here; keep those in your analysis QMD or a separate package that lists this package under `Suggests:`.
-
 ## License
 
 MIT © package authors; see `LICENSE` and `DESCRIPTION`.
