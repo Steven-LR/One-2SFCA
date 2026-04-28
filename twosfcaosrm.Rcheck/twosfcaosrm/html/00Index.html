@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head><title>R: Catchment-Based Two-Step Floating Accessibility with Local OSRM</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body><div class="container">
+<h1> Catchment-Based Two-Step Floating Accessibility with Local OSRM
+<img class="toplogo" src="../../../doc/html/Rlogo.svg" alt="[R logo]">
+</h1>
+<hr>
+<div style="text-align: center;">
+<a href="../../../doc/html/packages.html"><img class="arrow" src="../../../doc/html/left.jpg" alt="[Up]"></a>
+<a href="../../../doc/html/index.html"><img class="arrow" src="../../../doc/html/up.jpg" alt="[Top]"></a>
+</div><h2>Documentation for package &lsquo;twosfcaosrm&rsquo; version 0.1.0</h2>
+
+<ul><li><a href="../DESCRIPTION" type="text/plain; charset=utf-8">DESCRIPTION file</a>.</li>
+</ul>
+
+<h2>Help Pages</h2>
+
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="access.html">access</a></td>
+<td>Luo–Wang 2SFCA scores on demand polygons</td></tr>
+<tr><td style="width: 25%;"><a href="access_fixed_acs.html">access_fixed_acs</a></td>
+<td>Fixed ACS point estimates for mode weights ('access_fixed_acs')</td></tr>
+<tr><td style="width: 25%;"><a href="access_step_ratio.html">access_step_ratio</a></td>
+<td>Step-ratio access scores (R = 1/sum P, A per 10\,000)</td></tr>
+<tr><td style="width: 25%;"><a href="acs_gen.html">acs_gen</a></td>
+<td>Draw one truncated-normal realization of ACS counts and mode share p</td></tr>
+<tr><td style="width: 25%;"><a href="A_func.html">A_func</a></td>
+<td>Step-2 accessibility A (per 10k)</td></tr>
+<tr><td style="width: 25%;"><a href="duration_table_loop.html">distance_table_loop</a></td>
+<td>Pairwise durations using *osrmTable* in a 'for' loop (manuscript style)</td></tr>
+<tr><td style="width: 25%;"><a href="distance_url.html">distance_url</a></td>
+<td>Pairwise route distances via OSRM table service</td></tr>
+<tr><td style="width: 25%;"><a href="duration_url_route.html">distance_url_route</a></td>
+<td>Pairwise durations via OSRM *Route* API (loop; one HTTP GET per row)</td></tr>
+<tr><td style="width: 25%;"><a href="duration_table_loop.html">duration_table_loop</a></td>
+<td>Pairwise durations using *osrmTable* in a 'for' loop (manuscript style)</td></tr>
+<tr><td style="width: 25%;"><a href="duration_url.html">duration_url</a></td>
+<td>Pairwise travel times via OSRM table service</td></tr>
+<tr><td style="width: 25%;"><a href="duration_url_route.html">duration_url_route</a></td>
+<td>Pairwise durations via OSRM *Route* API (loop; one HTTP GET per row)</td></tr>
+<tr><td style="width: 25%;"><a href="get_adj.html">get_adj</a></td>
+<td>Build spatial neighborhood structure for Moran / local indices</td></tr>
+<tr><td style="width: 25%;"><a href="access.html">gpt_access</a></td>
+<td>Luo–Wang 2SFCA scores on demand polygons</td></tr>
+<tr><td style="width: 25%;"><a href="gpt_access_bands.html">gpt_access_bands</a></td>
+<td>'gpt_access': wide table of access by isochrone band ('isomax')</td></tr>
+<tr><td style="width: 25%;"><a href="gpt_isochrones_func.html">gpt_isochrones_func</a></td>
+<td>Multi-band isochrones with 'safely' (gpt-style)</td></tr>
+<tr><td style="width: 25%;"><a href="isochrones_func.html">isochrones_func</a></td>
+<td>Isochrones in the style used in workflow scripts (one ring per row)</td></tr>
+<tr><td style="width: 25%;"><a href="isochrones_purrr.html">isochrones_purrr</a></td>
+<td>Manuscript-style isochrones ('purrr::map2' + 'unnest')</td></tr>
+<tr><td style="width: 25%;"><a href="iso_nearest.html">iso_nearest</a></td>
+<td>Nearest OD durations (uses 'duration_url()' = 'osrmTable')</td></tr>
+<tr><td style="width: 25%;"><a href="iso_nearest_data_prep.html">iso_nearest_data_prep</a></td>
+<td>Prepare OD tables after 'st_within' list columns (nearest-neighbor style prep)</td></tr>
+<tr><td style="width: 25%;"><a href="iso_nearest_data_prep_named.html">iso_nearest_data_prep_named</a></td>
+<td>Prepare nearest-facility OD rows (manuscript 'iso_nearest_data_prep')</td></tr>
+<tr><td style="width: 25%;"><a href="join_iso.html">join_iso</a></td>
+<td>Join walk / drive isochrone membership for ACS-weighted access simulation</td></tr>
+<tr><td style="width: 25%;"><a href="join_iso.html">join_iso2</a></td>
+<td>Join walk / drive isochrone membership for ACS-weighted access simulation</td></tr>
+<tr><td style="width: 25%;"><a href="lwc_access.html">lwc_access</a></td>
+<td>Monte Carlo accessibility with propagated ACS uncertainty (LWC)</td></tr>
+<tr><td style="width: 25%;"><a href="lwc_access_fixed.html">lwc_access_fixed</a></td>
+<td>Point-estimate LWC (no MOE draws): ACS means only</td></tr>
+<tr><td style="width: 25%;"><a href="lwc_access_global.html">lwc_access_global</a></td>
+<td>City-level median access per simulation draw</td></tr>
+<tr><td style="width: 25%;"><a href="map_nyc_helpers.html">map_access_data</a></td>
+<td>Map tract data with NYC five-borough county filter (requires 'tigris')</td></tr>
+<tr><td style="width: 25%;"><a href="map_nyc_helpers.html">map_access_data2</a></td>
+<td>Map tract data with NYC five-borough county filter (requires 'tigris')</td></tr>
+<tr><td style="width: 25%;"><a href="map_nyc_helpers.html">map_data</a></td>
+<td>Map tract data with NYC five-borough county filter (requires 'tigris')</td></tr>
+<tr><td style="width: 25%;"><a href="map_nyc_helpers.html">map_nyc_helpers</a></td>
+<td>Map tract data with NYC five-borough county filter (requires 'tigris')</td></tr>
+<tr><td style="width: 25%;"><a href="match_supplies_to_isochrones.html">match_supplies_to_isochrones</a></td>
+<td>Build demand-supply pairs from point-in-polygon tests</td></tr>
+<tr><td style="width: 25%;"><a href="osrm_isochrones_batch.html">osrm_isochrones_batch</a></td>
+<td>Batch isochrones from a local OSRM server</td></tr>
+<tr><td style="width: 25%;"><a href="osrm_isochrones_batch.html">osrm_isodistance_batch</a></td>
+<td>Batch isochrones from a local OSRM server</td></tr>
+<tr><td style="width: 25%;"><a href="map_nyc_helpers.html">plot_access_map</a></td>
+<td>Map tract data with NYC five-borough county filter (requires 'tigris')</td></tr>
+<tr><td style="width: 25%;"><a href="proximity_url_route.html">proximity_url_route</a></td>
+<td>Distance and duration from Route API with annotations</td></tr>
+<tr><td style="width: 25%;"><a href="R_func.html">R_func</a></td>
+<td>Step-1 ratio R from 'support_prop'</td></tr>
+<tr><td style="width: 25%;"><a href="twosfca_scores.html">twosfca_from_pairs</a></td>
+<td>Two-step floating catchment accessibility scores</td></tr>
+<tr><td style="width: 25%;"><a href="twosfca_scores.html">twosfca_scores</a></td>
+<td>Two-step floating catchment accessibility scores</td></tr>
+</table>
+</div></body></html>

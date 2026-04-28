@@ -1,0 +1,27 @@
+Package: twosfcaosrm
+Title: Catchment-Based Two-Step Floating Accessibility with Local OSRM
+Version: 0.1.0
+Authors@R: c(
+    person("Original", "Implementation", role = "aut"),
+    person("Maintainer", "Contact", email = "maintainer@example.com", role = c("cre", "ctb"))
+  )
+Description: Helpers to run 2SFCA accessibility models using isochrones or
+    isodistances from a self-hosted Open Source Routing Machine (OSRM) instance,
+    typically via Docker. Wraps batch isochrone queries, OSRM table requests for
+    pairwise travel time or distance, supplier-to-demand spatial matching, and
+    the classic 2SFCA supply-demand competition ratios.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Imports: dplyr (>= 1.0.0), httr (>= 1.4.0), osrm (>= 4.0.0), purrr (>=
+        1.0.0), rlang (>= 1.0.0), sf (>= 1.0-9), spdep (>= 1.2-0),
+        tidyr (>= 1.2.0), truncnorm (>= 1.0-8), tibble (>= 3.0.0)
+Suggests: ggplot2 (>= 3.4.0), testthat (>= 3.0.0), tigris (>= 2.0.0)
+Depends: R (>= 4.0.0)
+NeedsCompilation: no
+Packaged: 2026-04-28 05:21:11 UTC; steven
+Author: Original Implementation [aut],
+  Maintainer Contact [cre, ctb]
+Maintainer: Maintainer Contact <maintainer@example.com>
+Built: R 4.5.2; ; 2026-04-28 05:21:14 UTC; unix

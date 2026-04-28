@@ -1,0 +1,137 @@
+* using log directory ‘/Volumes/T7/MacFeb2024/MARCH2024Codingdata/Phd/git_projects/One-2SFCA/twosfcaosrm.Rcheck’
+* using R version 4.5.2 (2025-10-31)
+* using platform: aarch64-apple-darwin20
+* R was compiled by
+    Apple clang version 16.0.0 (clang-1600.0.26.6)
+    GNU Fortran (GCC) 14.2.0
+* running under: macOS Sequoia 15.7.2
+* using session charset: UTF-8
+* using option ‘--no-manual’
+* checking for file ‘twosfcaosrm/DESCRIPTION’ ... OK
+* this is package ‘twosfcaosrm’ version ‘0.1.0’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... NOTE
+Found the following hidden files and directories:
+  ._DESCRIPTION
+  ._LICENSE
+  ._NAMESPACE
+  ._R
+  ._README.md
+  ._man
+  ._tests
+  R/._access-manuscript.R
+  R/._access.R
+  R/._acs-lwc.R
+  R/._adjacency.R
+  R/._catchments.R
+  R/._imports.R
+  R/._isochrones-manuscript.R
+  R/._maps-nyc.R
+  R/._nearest-manuscript.R
+  R/._osrm-local.R
+  R/._route-http.R
+  R/._table-loop.R
+  R/._twosfca.R
+  R/._twosfcaosrm-package.R
+  man/._A_func.Rd
+  man/._R_func.Rd
+  man/._access.Rd
+  man/._access_fixed_acs.Rd
+  man/._access_step_ratio.Rd
+  man/._acs_gen.Rd
+  man/._dis_url.Rd
+  man/._distance_url.Rd
+  man/._dur_url.Rd
+  man/._duration_table_loop.Rd
+  man/._duration_url.Rd
+  man/._duration_url_route.Rd
+  man/._get_adj.Rd
+  man/._gpt_access_bands.Rd
+  man/._gpt_isochrones_func.Rd
+  man/._iso_nearest.Rd
+  man/._iso_nearest_data_prep.Rd
+  man/._iso_nearest_data_prep_named.Rd
+  man/._isochrones_func.Rd
+  man/._isochrones_purrr.Rd
+  man/._join_iso.Rd
+  man/._lwc_access.Rd
+  man/._lwc_access_fixed.Rd
+  man/._lwc_access_global.Rd
+  man/._map_nyc_helpers.Rd
+  man/._match_supplies_to_isochrones.Rd
+  man/._osrm_isochrones_batch.Rd
+  man/._proximity_url_route.Rd
+  man/._twosfca_scores.Rd
+  man/._twosfcaosrm-package.Rd
+  tests/._testthat
+  tests/._testthat.R
+  tests/testthat/._test-twosfca.R
+These were most likely included in error. See section ‘Package
+structure’ in the ‘Writing R Extensions’ manual.
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking whether package ‘twosfcaosrm’ can be installed ... OK
+* checking installed package size ... INFO
+  installed size is  6.1Mb
+  sub-directories of 1Mb or more:
+    Meta   1.6Mb
+    help   1.4Mb
+* checking package directory ... OK
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... WARNING
+Subdirectory 'R' contains invalid file names:
+  ‘._access-manuscript.R’ ‘._access.R’ ‘._acs-lwc.R’ ‘._adjacency.R’
+  ‘._catchments.R’ ‘._imports.R’ ‘._isochrones-manuscript.R’
+  ‘._maps-nyc.R’ ‘._nearest-manuscript.R’ ‘._osrm-local.R’
+  ‘._route-http.R’ ‘._table-loop.R’ ‘._twosfca.R’
+  ‘._twosfcaosrm-package.R’
+Subdirectory 'man' contains invalid file names:
+  ‘._A_func.Rd’ ‘._R_func.Rd’ ‘._access.Rd’ ‘._access_fixed_acs.Rd’
+  ‘._access_step_ratio.Rd’ ‘._acs_gen.Rd’ ‘._dis_url.Rd’
+  ‘._distance_url.Rd’ ‘._dur_url.Rd’ ‘._duration_table_loop.Rd’
+  ‘._duration_url.Rd’ ‘._duration_url_route.Rd’ ‘._get_adj.Rd’
+  ‘._gpt_access_bands.Rd’ ‘._gpt_isochrones_func.Rd’ ‘._iso_nearest.Rd’
+  ‘._iso_nearest_data_prep.Rd’ ‘._iso_nearest_data_prep_named.Rd’
+  ‘._isochrones_func.Rd’ ‘._isochrones_purrr.Rd’ ‘._join_iso.Rd’
+  ‘._lwc_access.Rd’ ‘._lwc_access_fixed.Rd’ ‘._lwc_access_global.Rd’
+  ‘._map_nyc_helpers.Rd’ ‘._match_supplies_to_isochrones.Rd’
+  ‘._osrm_isochrones_batch.Rd’ ‘._proximity_url_route.Rd’
+  ‘._twosfca_scores.Rd’ ‘._twosfcaosrm-package.Rd’
+Please remove or rename the files.
+See section ‘Package subdirectories’ in the ‘Writing R Extensions’
+manual.
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... OK
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking examples ... OK
+* checking for unstated dependencies in ‘tests’ ... OK
+* checking tests ... OK
+  Running ‘testthat.R’
+* DONE
+Status: 1 WARNING, 1 NOTE

@@ -1,0 +1,48 @@
+A_func                  Step-2 accessibility A (per 10k)
+R_func                  Step-1 ratio R from 'support_prop'
+access                  Luo–Wang 2SFCA scores on demand polygons
+access_fixed_acs        Fixed ACS point estimates for mode weights
+                        ('access_fixed_acs')
+access_step_ratio       Step-ratio access scores (R = 1/sum P, A per
+                        10\,000)
+acs_gen                 Draw one truncated-normal realization of ACS
+                        counts and mode share p
+distance_url            Pairwise route distances via OSRM table service
+distance_url_route      Pairwise durations via OSRM *Route* API (loop;
+                        one HTTP GET per row)
+duration_table_loop     Pairwise durations using *osrmTable* in a 'for'
+                        loop (manuscript style)
+duration_url            Pairwise travel times via OSRM table service
+get_adj                 Build spatial neighborhood structure for Moran
+                        / local indices
+gpt_access_bands        'gpt_access': wide table of access by isochrone
+                        band ('isomax')
+gpt_isochrones_func     Multi-band isochrones with 'safely' (gpt-style)
+iso_nearest             Nearest OD durations (uses 'duration_url()' =
+                        'osrmTable')
+iso_nearest_data_prep   Prepare OD tables after 'st_within' list
+                        columns (nearest-neighbor style prep)
+iso_nearest_data_prep_named
+                        Prepare nearest-facility OD rows (manuscript
+                        'iso_nearest_data_prep')
+isochrones_func         Isochrones in the style used in workflow
+                        scripts (one ring per row)
+isochrones_purrr        Manuscript-style isochrones ('purrr::map2' +
+                        'unnest')
+join_iso                Join walk / drive isochrone membership for
+                        ACS-weighted access simulation
+lwc_access              Monte Carlo accessibility with propagated ACS
+                        uncertainty (LWC)
+lwc_access_fixed        Point-estimate LWC (no MOE draws): ACS means
+                        only
+lwc_access_global       City-level median access per simulation draw
+map_nyc_helpers         Map tract data with NYC five-borough county
+                        filter (requires 'tigris')
+match_supplies_to_isochrones
+                        Build demand-supply pairs from point-in-polygon
+                        tests
+osrm_isochrones_batch   Batch isochrones from a local OSRM server
+proximity_url_route     Distance and duration from Route API with
+                        annotations
+twosfca_scores          Two-step floating catchment accessibility
+                        scores
