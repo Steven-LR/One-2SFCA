@@ -17,9 +17,11 @@ route_v1_url <- function(lng1, lat1, lng2, lat2, profile, server) {
 #' One-row network distance via OSRM Route HTTP API (miles by default)
 #'
 #' @param i Row index into vectors `lat1`, `lng1`, `lat2`, `lng2`.
-#' @param scale_fac Meters per **one mile** (multiply route meters by `1/scale_fac`).
-#' @inheritParams duration_url_route
-#' @return Numeric distance in miles if HTTP 200; otherwise a string starting with `"error"`.
+#' @param lat1,lng1,lat2,lng2 Vectors of coordinates (see parent loop).
+#' @param profile Routing profile string.
+#' @param server OSRM base URL.
+#' @param scale_fac Meters per mile.
+#' @return Numeric distance in miles if HTTP 200; otherwise `NA`.
 #' @keywords internal
 dis_url <- function(i,
                     scale_fac = 1.60934 * 1000,
@@ -40,6 +42,7 @@ dis_url <- function(i,
 }
 
 #' @rdname duration_url_route
+#' @param scale_fac Meters per mile (OSRM route distance is in meters).
 #' @export
 distance_url_route <- function(data,
                                scale_fac = 1.60934 * 1000,
@@ -71,8 +74,9 @@ distance_url_route <- function(data,
 #' One-row duration via OSRM Route HTTP API (seconds)
 #'
 #' @param i Row index.
-#' @inheritParams distance_url_route
-#' @return Duration in seconds, or error string.
+#' @param lat1,lng1,lat2,lng2 Coordinate vectors.
+#' @param profile,server Routing profile and OSRM base URL.
+#' @return Seconds on success; `NA` if HTTP fails.
 #' @keywords internal
 dur_url <- function(i,
                     lat1,
@@ -102,7 +106,7 @@ dur_url <- function(i,
 #' @param profile Routing profile (e.g. `"driving"`, `"foot"` — must match OSRM).
 #' @param server Base URL (with or without trailing slash).
 #'
-#' @return `data` with a `duration` column (may be coerced; failed rows become `NA`).
+#' @return `data` with a `duration` column.
 #' @export
 duration_url_route <- function(data,
                                lat1,

@@ -164,6 +164,9 @@ acs_gen <- function(data) {
 
 #' Step-1 ratio \eqn{R} from `support_prop`
 #'
+#' @param data Long table with `query`, `GEOID`, `population`, `support_prop`
+#'   (e.g. output of [acs_gen()]).
+#'
 #' @export
 R_func <- function(data) {
   data %>%
@@ -174,6 +177,8 @@ R_func <- function(data) {
 }
 
 #' Step-2 accessibility \eqn{A} (per 10k)
+#'
+#' @param data Table containing `R`, `GEOID`, and `p` (e.g. output of [R_func()]).
 #'
 #' @export
 A_func <- function(data) {

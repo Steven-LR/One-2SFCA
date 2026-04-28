@@ -64,3 +64,7 @@ polygons.
 \code{gpt_access} is an alias kept for compatibility with older analysis
 scripts; behavior is identical to \code{\link[=access]{access()}}.
 }
+\seealso{
+\code{\link[=access_step_ratio]{access_step_ratio()}} for the thesis-style ratio
+(\eqn{R=1/\sum P}, \eqn{A} per 10k) used with pharmacy data.
+}

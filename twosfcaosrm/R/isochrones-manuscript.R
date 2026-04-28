@@ -44,7 +44,7 @@ isochrones_purrr <- function(data,
   if (nrow(d0) == 0L) {
     rlang::abort("All isochrone requests failed.")
   }
-  flat <- tidyr::unnest(d0, cols = iso)
+  flat <- tidyr::unnest(d0, cols = "iso")
   g <- flat[[geom_col]]
   flat[[geom_col]] <- NULL
   flat$geometry <- g

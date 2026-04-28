@@ -33,7 +33,7 @@ duration_one_table <- function(data,
   if (!is.matrix(m) || nrow(m) < 1L || ncol(m) < 1L) {
     return(NA_real_)
   }
-  stats::diag(m)[1]
+  diag(as.matrix(m))[1L]
 }
 
 #' Pairwise durations using **osrmTable** in a `for` loop (manuscript style)

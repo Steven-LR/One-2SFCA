@@ -76,6 +76,24 @@ Official references: [OSRM](http://project-osrm.org/), [osrm-backend Docker](htt
 | `access()` | One-shot: match + 2SFCA + join scores to demand `sf`. |
 | `gpt_access()` | Alias of `access()` for older scripts. |
 
+### Manuscript / thesis helpers (from Aim1-style workflows)
+
+| Function | Purpose |
+|----------|---------|
+| `duration_url_route()`, `distance_url_route()` | One HTTP `route/v1` request **per row** (incremental Docker checks). |
+| `proximity_url_route()` | Same API, returns both distance (mi) and duration (min). |
+| `duration_table_loop()`, `distance_table_loop()` | One `osrmTable` call per row (safer on huge tables). |
+| `isochrones_purrr()`, `gpt_isochrones_func()` | `purrr::map2` / multi-band isochrones with `row_id`. |
+| `access_step_ratio()`, `gpt_access_bands()` | Pharmacy-style **R = 1/sum(P)** and wide `isomax` columns. |
+| `access_fixed_acs()` | Point-estimate ACS mode weights in **R**. |
+| `iso_nearest_data_prep_named()`, `iso_nearest()` | Nearest-facility OD table + `duration_url()`. |
+| `join_iso()`, `join_iso2()`, `acs_gen()`, `R_func()`, `A_func()` | Walk/drive support table + ACS draw + 2-step scores. |
+| `lwc_access()`, `lwc_access_global()`, `lwc_access_fixed()` | Monte Carlo / fixed linear weighting of mode access. |
+| `get_adj()` | Neighborhood list and weights ([`spdep`](https://cran.r-project.org/package=spdep)) for Moran stats. |
+| `map_data()`, `map_access_data()`, `plot_access_map()` | NYC-oriented mapping ([`tigris`](https://cran.r-project.org/package=tigris), [`ggplot2`](https://cran.r-project.org/package=ggplot2)). |
+
+**Canonical vs manuscript routing:** `duration_url()` / `distance_url()` use a **single** `osrmTable()` over all rows; `*_route()` matches the original looped **Route** service. Use one style consistently within an analysis.
+
 ## Install (development)
 
 From the repository root (on macOS, setting `COPYFILE_DISABLE=1` avoids AppleDouble

@@ -42,6 +42,8 @@ iso_nearest_data_prep_named <- function(pnts,
 #' @inheritParams iso_nearest_data_prep_named
 #' @param lat1,lng1 Column names for centroid (typically `"latitude_c"`, `"longitude_c"`).
 #' @param lat2,lng2 Column names for facility (here `"latitude_p"`, `"longitude_p"`).
+#' @param profile OSRM profile passed to [duration_url()].
+#' @param server OSRM base URL passed to [duration_url()].
 #'
 #' @export
 iso_nearest <- function(pnts,
