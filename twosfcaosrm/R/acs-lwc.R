@@ -42,6 +42,8 @@ join_iso <- function(data,
   .require_cols(sf::st_drop_geometry(iso_w), tid)
   .require_cols(sf::st_drop_geometry(iso_c), tid)
   .require_cols(data, c(tid, pop_col, acs_cols))
+  walk_geo <- sprintf("__twosfca_walk_%s", tid)
+  car_geo <- sprintf("__twosfca_car_%s", tid)
 
   pnts_w %>%
     dplyr::select(dplyr::all_of(c(sid, "within_isochrone"))) %>%
@@ -57,6 +59,7 @@ join_iso <- function(data,
     sf::st_drop_geometry() %>%
     dplyr::mutate(within_iso_w = 1L) %>%
     dplyr::rename(within_isochrone_w = .data$within_isochrone) %>%
+    dplyr::rename(!!rlang::sym(walk_geo) := !!rlang::sym(tid)) %>%
     dplyr::full_join(
       pnts_c %>%
         dplyr::select(dplyr::all_of(c(sid, "within_isochrone"))) %>%
@@ -72,9 +75,14 @@ join_iso <- function(data,
         sf::st_drop_geometry() %>%
         dplyr::mutate(within_iso_c = 1L) %>%
         dplyr::rename(within_isochrone_c = .data$within_isochrone) %>%
-        dplyr::select(dplyr::all_of(c(sid, "within_iso_c", "within_isochrone_c"))),
+        dplyr::rename(!!rlang::sym(car_geo) := !!rlang::sym(tid)) %>%
+        dplyr::select(dplyr::all_of(c(sid, car_geo, "within_iso_c", "within_isochrone_c"))),
       by = c(sid, "within_isochrone_w" = "within_isochrone_c")
     ) %>%
+    dplyr::mutate(
+      !!tid := dplyr::coalesce(.data[[walk_geo]], .data[[car_geo]])
+    ) %>%
+    dplyr::select(-!!rlang::sym(walk_geo), -!!rlang::sym(car_geo)) %>%
     dplyr::mutate(
       dplyr::across(dplyr::starts_with("within_iso"), ~ tidyr::replace_na(.x, 0L))
     ) %>%
